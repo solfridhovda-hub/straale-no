@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Stråle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-body">
+
+  <nav class="site-nav">
+    <a class="nav-logo" href="index.html">Stråle<span class="dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="tjenester.html">Tjenester</a></li>
+      <li><a href="slik-fungerer-det.html">Slik fungerer det</a></li>
+      <li><a href="om-oss.html">Om oss</a></li>
+      <li><a href="kontakt.html" class="nav-cta active">Gratis gjennomgang</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Meny">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="dark-hero" style="padding-bottom: 5rem;">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Kom i gang</p>
+      <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Gratis<br><em>digital gjennomgang</em></h1>
+      <p class="hero-sub">30 minutter. Vi ser på din digitale tilstedeværelse og gir ærlige tilbakemeldinger. Ingen forpliktelser – ingen salgspress.</p>
+    </div>
+  </div>
+
+  <section class="light-section">
+    <div class="light-section-inner">
+      <div class="contact-layout">
+        <div class="contact-left">
+          <p>Vi bruker 30 minutter på å gå gjennom din digitale situasjon i dag. Du får se konkret hvordan Google-profilen din ser ut, hva nettsiden signaliserer til nye kunder, og hvor dere ligger sammenlignet med to–tre lokale konkurrenter.</p>
+          <p>Uansett om du blir kunde eller ikke går du fra møtet med noe nyttig. Det er hele poenget.</p>
+
+          <div class="what-happens">
+            <p class="wh-title">Hva skjer etter at du sender skjemaet</p>
+            <div class="wh-step">
+              <span class="wh-step-num">1</span>
+              <p class="wh-step-text"><strong>Du hører fra oss innen én virkedag</strong> – vi sender en kalenderinvitasjon for et 30-minutters videomøte.</p>
+            </div>
+            <div class="wh-step">
+              <span class="wh-step-num">2</span>
+              <p class="wh-step-text"><strong>Vi gjennomfører gjennomgangen</strong> – og viser deg konkret hva som fungerer, hva som ikke fungerer, og hva konkurrentene gjør bedre.</p>
+            </div>
+            <div class="wh-step">
+              <span class="wh-step-num">3</span>
+              <p class="wh-step-text"><strong>Du bestemmer selv</strong> – ingen oppfølging om du ikke ønsker det. Vil du gå videre er vi klare til å starte etableringen.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2 class="form-card-title">Book din gjennomgang</h2>
+          <p class="form-card-sub">Tar under to minutter å fylle ut.</p>
+
+          <!--
+            TILPASNING: Dette skjemaet bruker Formspree (formspree.io) for å
+            sende innsendinger til e-post uten egen backend. Gratis for
+            inntil 50 innsendinger/mnd, det er nok for de fleste i denne
+            målgruppen til å begynne med.
+
+            1. Opprett konto på formspree.io
+            2. Lag et nytt skjema, kobl det til e-postadressen som skal
+               motta henvendelser
+            3. Bytt ut "DITT-SKJEMA-ID" under med ID-en du får fra Formspree
+          -->
+          <form id="contactForm" action="https://formspree.io/f/DITT-SKJEMA-ID" method="POST">
+            <div id="formArea">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Navn</label>
+                  <input type="text" id="name" name="navn" placeholder="Kari Nordmann" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Telefon</label>
+                  <input type="tel" id="phone" name="telefon" placeholder="900 00 000" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="epost" placeholder="kari@bedriften.no" required />
+              </div>
+              <div class="form-group">
+                <label for="business">Bedriftsnavn</label>
+                <input type="text" id="business" name="bedrift" placeholder="Nordmann Rør AS" required />
+              </div>
+              <div class="form-group">
+                <label for="industry">Bransje</label>
+                <select id="industry" name="bransje">
+                  <option value="" disabled selected>Velg bransje</option>
+                  <option>Rørlegger / VVS</option>
+                  <option>Elektriker</option>
+                  <option>Bilverksted</option>
+                  <option>Tannlege / Klinikk</option>
+                  <option>Fysioterapeut / Kiropraktor</option>
+                  <option>Dyreklinikk</option>
+                  <option>Optiker</option>
+                  <option>Regnskapsfører</option>
+                  <option>Frisør / Skjønnhet</option>
+                  <option>Treningsstudio</option>
+                  <option>Annet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="web">Nettside (hvis du har en)</label>
+                <input type="url" id="web" name="nettside" placeholder="www.bedriften.no" />
+              </div>
+              <div class="form-group">
+                <label for="msg">Noe du vil si på forhånd? <span style="font-weight:400; color:var(--ink-muted)">(valgfritt)</span></label>
+                <textarea id="msg" name="melding" placeholder="F.eks. hva som bekymrer deg mest digitalt, eller hva du har prøvd tidligere..."></textarea>
+              </div>
+              <button class="btn-submit" type="submit">Send – jeg vil ha en gratis gjennomgang</button>
+            </div>
+          </form>
+
+          <div class="success-state" id="successState">
+            <div class="success-icon">✓</div>
+            <h3 class="success-title">Takk, vi tar kontakt!</h3>
+            <p class="success-body">Du hører fra oss innen én virkedag med en kalenderinvitasjon for din gratis gjennomgang.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-logo" href="index.html">Stråle<span class="dot">.</span></a>
+      <nav class="footer-links">
+        <a href="tjenester.html">Tjenester</a>
+        <a href="slik-fungerer-det.html">Slik fungerer det</a>
+        <a href="om-oss.html">Om oss</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <p class="footer-copy">© 2026 Stråle · Østfold</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          document.getElementById('formArea').style.display = 'none';
+          document.getElementById('successState').style.display = 'block';
+        } else {
+          alert('Noe gikk galt. Prøv igjen, eller ta kontakt direkte på e-post.');
+        }
+      } catch (error) {
+        alert('Noe gikk galt. Prøv igjen, eller ta kontakt direkte på e-post.');
+      }
+    });
+  </script>
+</body>
+</html>
