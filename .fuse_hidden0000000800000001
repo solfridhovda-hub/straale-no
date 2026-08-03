@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Straale – Digital tilstedeværelse for lokale bedrifter i Østfold</title>
+  <title>Stråle – Digital tilstedeværelse for lokale bedrifter i Østfold</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
@@ -11,7 +11,7 @@
 <body class="page-body">
 
   <nav class="site-nav">
-    <a class="nav-logo" href="index.html">Straale<span class="dot">.</span></a>
+    <a class="nav-logo" href="index.html">Stråle<span class="dot">.</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">Hjem</a></li>
       <li><a href="tjenester.html">Tjenester</a></li>
@@ -31,7 +31,7 @@
       <h1 class="hero-title">
         Kundene dine<br>googler.<br><em>Dukker du opp?</em>
       </h1>
-      <p class="hero-sub">Straale tar seg av hele din digitale tilstedeværelse, fra Google til nettside og sosiale medier. Fast månedspris. Én kontaktperson. Ingen overraskelser.</p>
+      <p class="hero-sub">Stråle tar seg av hele din digitale tilstedeværelse, fra Google til nettside og sosiale medier. Fast månedspris. Én kontaktperson. Ingen overraskelser.</p>
       <div class="hero-actions">
         <a class="btn-gold" href="kontakt.html">Få en gratis gjennomgang</a>
         <a class="btn-ghost-light" href="tjenester.html">Se hva som er inkludert →</a>
@@ -70,7 +70,7 @@
         <div class="promise-text">
           <h2 class="section-heading">Den digitale personen du aldri hadde råd til å ansette.</h2>
           <p>De fleste bedrifter vi jobber med er dyktige på faget sitt. Det de mangler er ikke kompetanse – det er en dedikert person som sørger for at det digitale er på stell.</p>
-          <p>Straale er den personen. For en fast månedspris som er en brøkdel av hva en ansatt ville kostet.</p>
+          <p>Stråle er den personen. For en fast månedspris som er en brøkdel av hva en ansatt ville kostet.</p>
           <a class="btn-primary-dark" href="slik-fungerer-det.html">Slik fungerer det</a>
         </div>
         <div class="promise-visual">
@@ -149,14 +149,14 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="footer-logo" href="index.html">Straale<span class="dot">.</span></a>
+      <a class="footer-logo" href="index.html">Stråle<span class="dot">.</span></a>
       <nav class="footer-links">
         <a href="tjenester.html">Tjenester</a>
         <a href="slik-fungerer-det.html">Slik fungerer det</a>
         <a href="om-oss.html">Om oss</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <p class="footer-copy">© 2026 Straale · Østfold</p>
+      <p class="footer-copy">© 2026 Stråle · Østfold</p>
     </div>
   </footer>
   <script src="js/nav.js"></script>

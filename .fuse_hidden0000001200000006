@@ -1,4 +1,4 @@
-# Straale – nettsidemal
+# Stråle – nettsidemal
 
 Dette er grunnmuren: fem sider, ferdig kode, og ett sted (`css/styles.css`,
 helt øverst) hvor du bytter farger og fonter for en ny kunde.
@@ -46,7 +46,7 @@ vil ikke skjemaet sende noe til deg.
    feltet merket "TILPASNING FOR NY KUNDE" øverst i filen
    (husk å også bytte fontnavn i `@import`-linjen rett over)
 3. Bruk søk-og-erstatt i alle HTML-filer for å bytte ut:
-   - "Straale" → kundens navn
+   - "Stråle" → kundens navn
    - "Østfold" / "Moss" → kundens område
    - Priser, tjenester og profiltekst i `om-oss.html`
 4. Bytt Formspree-ID i `kontakt.html` til kundens egen
@@ -60,7 +60,7 @@ straale-mal/
 ├── index.html              Forside
 ├── tjenester.html           Tjenester og priser
 ├── slik-fungerer-det.html   Prosess og FAQ
-├── om-oss.html              Om Straale / profil
+├── om-oss.html              Om Stråle / profil
 ├── kontakt.html              Skjema for gratis gjennomgang
 ├── css/styles.css            All styling – FARGER OG FONTER ENDRES HER
 └── js/nav.js                 Mobilmeny og aktiv lenke

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slik fungerer det – Straale</title>
+  <title>Slik fungerer det – Stråle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
@@ -11,7 +11,7 @@
 <body class="page-body">
 
   <nav class="site-nav">
-    <a class="nav-logo" href="index.html">Straale<span class="dot">.</span></a>
+    <a class="nav-logo" href="index.html">Stråle<span class="dot">.</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Hjem</a></li>
       <li><a href="tjenester.html">Tjenester</a></li>
@@ -172,14 +172,14 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="footer-logo" href="index.html">Straale<span class="dot">.</span></a>
+      <a class="footer-logo" href="index.html">Stråle<span class="dot">.</span></a>
       <nav class="footer-links">
         <a href="tjenester.html">Tjenester</a>
         <a href="slik-fungerer-det.html">Slik fungerer det</a>
         <a href="om-oss.html">Om oss</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <p class="footer-copy">© 2026 Straale · Østfold</p>
+      <p class="footer-copy">© 2026 Stråle · Østfold</p>
     </div>
   </footer>
   <script src="js/nav.js"></script>

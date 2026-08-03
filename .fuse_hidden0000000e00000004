@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Om oss – Straale</title>
+  <title>Om oss – Stråle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
@@ -11,7 +11,7 @@
 <body class="page-body">
 
   <nav class="site-nav">
-    <a class="nav-logo" href="index.html">Straale<span class="dot">.</span></a>
+    <a class="nav-logo" href="index.html">Stråle<span class="dot">.</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Hjem</a></li>
       <li><a href="tjenester.html">Tjenester</a></li>
@@ -28,7 +28,7 @@
     <div class="hero-inner">
       <p class="hero-eyebrow">Om oss</p>
       <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Lokal kunnskap.<br><em>Ekte resultater.</em></h1>
-      <p class="hero-sub">Straale er ikke et upersonlig byrå med prosjektledere og lange e-postkjeder. Det er én person som kjenner bedriften din og tar ansvar for hele den digitale tilstedeværelsen.</p>
+      <p class="hero-sub">Stråle er ikke et upersonlig byrå med prosjektledere og lange e-postkjeder. Det er én person som kjenner bedriften din og tar ansvar for hele den digitale tilstedeværelsen.</p>
     </div>
   </div>
 
@@ -37,9 +37,9 @@
     <div class="light-section-inner">
       <div class="about-intro">
         <div class="about-text">
-          <p>Straale ble startet fordi det fantes et åpenbart gap i markedet. <strong>Store byråer er for dyre og upersonlige</strong> for etablerte lokale bedrifter. Enkle frilansere leverer enkeltoppdrag uten kontinuitet. Og å ansette noen internt er et stort steg.</p>
+          <p>Stråle ble startet fordi det fantes et åpenbart gap i markedet. <strong>Store byråer er for dyre og upersonlige</strong> for etablerte lokale bedrifter. Enkle frilansere leverer enkeltoppdrag uten kontinuitet. Og å ansette noen internt er et stort steg.</p>
           <p>Ideen er enkel: gi lokale bedrifter i Østfold tilgang til <strong>profesjonell, løpende digital markedsføring</strong> – uten byråpriser, uten binding, og med én person som faktisk kjenner bedriften din og bryr seg om resultatene.</p>
-          <p>Straale er bygget rundt det som faktisk <strong>driver kunder til lokale bedrifter</strong> – Google-synlighet, gode anmeldelser og et profesjonelt inntrykk når noen sjekker deg ut. Ikke likes og rekkevidde for rekkeviddens skyld.</p>
+          <p>Stråle er bygget rundt det som faktisk <strong>driver kunder til lokale bedrifter</strong> – Google-synlighet, gode anmeldelser og et profesjonelt inntrykk når noen sjekker deg ut. Ikke likes og rekkevidde for rekkeviddens skyld.</p>
           <p>Vi jobber med et begrenset antall kunder om gangen – fordi <strong>kvalitet og personlig oppfølging</strong> er hele poenget.</p>
         </div>
 
@@ -102,14 +102,14 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <a class="footer-logo" href="index.html">Straale<span class="dot">.</span></a>
+      <a class="footer-logo" href="index.html">Stråle<span class="dot">.</span></a>
       <nav class="footer-links">
         <a href="tjenester.html">Tjenester</a>
         <a href="slik-fungerer-det.html">Slik fungerer det</a>
         <a href="om-oss.html">Om oss</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <p class="footer-copy">© 2026 Straale · Østfold</p>
+      <p class="footer-copy">© 2026 Stråle · Østfold</p>
     </div>
   </footer>
   <script src="js/nav.js"></script>
