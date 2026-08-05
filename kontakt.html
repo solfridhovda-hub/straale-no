@@ -60,18 +60,13 @@
           <h2 class="form-card-title">Book din gjennomgang</h2>
           <p class="form-card-sub">Tar under to minutter å fylle ut.</p>
 
-          <!--
-            TILPASNING: Dette skjemaet bruker Formspree (formspree.io) for å
-            sende innsendinger til e-post uten egen backend. Gratis for
-            inntil 50 innsendinger/mnd, det er nok for de fleste i denne
-            målgruppen til å begynne med.
-
-            1. Opprett konto på formspree.io
-            2. Lag et nytt skjema, kobl det til e-postadressen som skal
-               motta henvendelser
-            3. Bytt ut "DITT-SKJEMA-ID" under med ID-en du får fra Formspree
-          -->
-          <form id="contactForm" action="https://formspree.io/f/xdarvpwb" method="POST">
+          <!-- Skjemaet bruker Netlify Forms. Innsendinger vises i Netlify under Forms,
+               og du setter opp e-postvarsel der. Ingen tredjepartskonto trengs. -->
+          <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none">
+              <label>Ikke fyll ut dette feltet: <input name="bot-field" /></label>
+            </p>
             <div id="formArea">
               <div class="form-row">
                 <div class="form-group">
@@ -147,12 +142,12 @@
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
-      const data = new FormData(form);
+      const data = new URLSearchParams(new FormData(form));
       try {
-        const response = await fetch(form.action, {
+        const response = await fetch('/', {
           method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: data.toString()
         });
         if (response.ok) {
           document.getElementById('formArea').style.display = 'none';
