@@ -175,7 +175,7 @@
         <a href="om-oss.html">Om oss</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <p class="footer-copy">© 2026 Straale · Østfold · <a href="personvern.html">Personvern</a></p>
+      <p class="footer-copy">© 2026 Straale · Østfold</p>
     </div>
   </footer>
   <script src="js/nav.js"></script>
