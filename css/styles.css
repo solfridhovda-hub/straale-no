@@ -810,3 +810,8 @@ hr.divider {
   text-decoration: none;
 }
 .contact-direct a:hover { color: var(--brand-accent); }
+
+/* ─── FORSIDE: én kolonne i "Hva jeg gjør", tre pakker ─── */
+.promise-single { grid-template-columns: 1fr; max-width: 720px; }
+.package-grid-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .package-grid-3 { grid-template-columns: 1fr; } }
