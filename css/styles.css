@@ -814,3 +814,11 @@ hr.divider {
 .promise-single { grid-template-columns: 1fr; max-width: 720px; }
 .package-grid-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .package-grid-3 { grid-template-columns: 1fr; } }
+
+/* Pakkeikoner */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.pc-features { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem 0.5rem; margin: 0 0 1.5rem; padding: 0 0 1.5rem; border-bottom: 1px solid var(--rule); }
+.pc-features li { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-body); font-size: 0.82rem; color: var(--ink); }
+.pc-features svg { width: 34px; height: 34px; flex: none; padding: 6px; border-radius: 8px; border: 1px solid var(--brand-accent); background: rgba(201,168,76,0.12); color: var(--brand-dark); fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.pc-features .pf-off { color: var(--ink-soft); text-decoration: line-through; }
+.pc-features .pf-off svg { border: 1px dashed #b5b2a8; background: none; color: #767676; }
