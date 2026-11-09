@@ -10,3 +10,4 @@ ehthumbs.db
 *.log
 .vscode/
 .idea/
+.fuse_hidden*

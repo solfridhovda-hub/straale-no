@@ -1,4 +1,4 @@
-# Straale – nettsidemal
+# Straale nettsidemal
 
 Dette er grunnmuren: fem sider, ferdig kode, og ett sted (`css/styles.css`,
 helt øverst) hvor du bytter farger og fonter for en ny kunde.

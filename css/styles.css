@@ -784,3 +784,29 @@ hr.divider {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* ─── KONTAKTINFO I FOOTER ─── */
+.footer-contact { display: flex; flex-direction: column; gap: 0.35rem; }
+.footer-contact p { font-family: var(--font-body); font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+.footer-contact a { color: rgba(255,255,255,0.75); text-decoration: none; }
+.footer-contact a:hover { color: var(--brand-accent-light); }
+.footer-contact .footer-logo { margin-bottom: 0.4rem; }
+
+/* ─── PROFILBILDE ─── */
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── DIREKTE KONTAKT PÅ KONTAKTSIDEN ─── */
+.contact-direct { margin: 2rem 0; }
+.contact-direct a {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.contact-direct a:hover { color: var(--brand-accent); }
