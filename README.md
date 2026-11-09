@@ -57,10 +57,11 @@ trenger normalt ikke endres.
 ## Filoversikt
 ```
 straale-mal/
-├── index.html              Forside
-├── tjenester.html           Tjenester og priser
+├── index.html              Forside og priser
 ├── slik-fungerer-det.html   Prosess og FAQ
-├── om-oss.html              Om Straale / profil
+├── straalende-folk.html     Om Solfrid og Straale
+├── personvern.html          Personvernerklæring
+├── _redirects               Videresending fra gamle adresser
 ├── kontakt.html              Skjema for gratis gjennomgang
 ├── css/styles.css            All styling – FARGER OG FONTER ENDRES HER
 └── js/nav.js                 Mobilmeny og aktiv lenke
