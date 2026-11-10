@@ -1,0 +1,11 @@
+# Lang cache for filer som sjelden endres. HTML caches ikke her.
+/css/fonter/*
+  Cache-Control: public, max-age=31536000, immutable
+/bilder/*
+  Cache-Control: public, max-age=2592000
+/favicon.ico
+  Cache-Control: public, max-age=2592000
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

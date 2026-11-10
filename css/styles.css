@@ -1,6 +1,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,400;9..144,500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap');
+/* ─── FONTER (selvhostet, ingen kall til Google) ───
+   Filene ligger i css/fonter/. Lisens: SIL Open Font License, se LISENS-filene. */
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonter/fraunces-latin-300-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonter/fraunces-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonter/fraunces-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Fraunces'; font-style: italic; font-weight: 400; font-display: swap; src: url('fonter/fraunces-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Schibsted Grotesk'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonter/schibsted-grotesk-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Schibsted Grotesk'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonter/schibsted-grotesk-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Schibsted Grotesk'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonter/schibsted-grotesk-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Schibsted Grotesk'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonter/schibsted-grotesk-latin-700-normal.woff2') format('woff2'); }
 
 /* ══════════════════════════════════════════════════════════════
    TILPASNING FOR NY KUNDE
@@ -9,23 +18,23 @@
    ikke røre.
    ══════════════════════════════════════════════════════════════ */
 :root {
-  /* Merkevarefarger — bytt disse fire for ny kunde */
+  /* Merkevarefarger: bytt disse fire for ny kunde */
   --brand-dark: #0d1b2a;      /* Hovedfarge, mørk (hero, nav, footer) */
   --brand-dark-soft: #162436; /* Litt lysere variant av hovedfargen */
   --brand-accent: #c9a84c;    /* Aksentfarge (knapper, ikoner, detaljer) */
   --brand-accent-light: #e8d49a; /* Lysere aksent (uthevet tekst i overskrifter) */
 
-  /* Fonter — bytt disse to for ny kunde (må også byttes i @import over) */
+  /* Fonter: bytt disse to for ny kunde (må også byttes i @font-face-blokken over) */
   --font-heading: 'Fraunces', serif;
   --font-body: 'Schibsted Grotesk', sans-serif;
 
-  /* Nøytrale farger — disse fungerer som regel med de fleste paletter,
+  /* Nøytrale farger: disse fungerer som regel med de fleste paletter,
      men kan justeres om ny kundes merkevare krever det */
   --paper: #fafaf8;
   --white: #ffffff;
   --ink: #1a1a1a;
   --ink-soft: #4a4a4a;
-  --ink-muted: #888;
+  --ink-muted: #6b6b6b;      /* 5,1:1 mot off-white, holder WCAG AA */
   --rule: #e2e0da;
   --rule-dark: rgba(255,255,255,0.1);
   --green: #1a6b3c;
@@ -58,15 +67,8 @@ body {
   border-bottom: 1px solid var(--rule-dark);
 }
 
-.nav-logo {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--white);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-}
-.nav-logo .dot { color: var(--brand-accent); }
+.nav-logo { display: inline-flex; align-items: center; padding: 8px 0; }
+.nav-logo img { display: block; width: 104px; height: auto; }
 
 .nav-links {
   display: flex;
@@ -214,7 +216,7 @@ body {
 
 .btn-ghost-light {
   font-family: var(--font-body);
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.75);
   font-size: 0.85rem;
   text-decoration: none;
   transition: color 0.15s;
@@ -364,7 +366,7 @@ hr.divider {
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
-.cta-band p { font-family: var(--font-body); color: rgba(255,255,255,0.5); font-size: 0.95rem; }
+.cta-band p { font-family: var(--font-body); color: rgba(255,255,255,0.7); font-size: 0.95rem; }
 
 /* ─── FOOTER ─── */
 .site-footer {
@@ -381,25 +383,18 @@ hr.divider {
   flex-wrap: wrap;
   gap: 1.5rem;
 }
-.footer-logo {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--white);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-}
-.footer-logo .dot { color: var(--brand-accent); }
+.footer-logo { display: inline-block; }
+.footer-logo img { display: block; width: 96px; height: auto; }
 .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .footer-links a {
   font-family: var(--font-body);
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.7);
   text-decoration: none;
   transition: color 0.15s;
 }
 .footer-links a:hover { color: rgba(255,255,255,0.8); }
-.footer-copy { font-family: var(--font-body); font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+.footer-copy { font-family: var(--font-body); font-size: 0.75rem; color: rgba(255,255,255,0.6); }
 
 /* ─── FORM ─── */
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
@@ -487,9 +482,10 @@ hr.divider {
   margin-right: 1.5rem;
 }
 .strip-item:last-child { border-right: none; }
-.strip-item .strip-icon { font-size: 1.1rem; margin-bottom: 0.6rem; opacity: 0.7; }
-.strip-item h3 { font-family: var(--font-body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.3rem; }
-.strip-item p { font-family: var(--font-body); font-size: 0.8rem; color: rgba(255,255,255,0.3); line-height: 1.5; }
+.services-strip { list-style: none; }
+.strip-item .strip-icon { width: 22px; height: 22px; margin-bottom: 0.6rem; fill: none; stroke: var(--brand-accent); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.strip-item h2 { font-family: var(--font-body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-bottom: 0.3rem; }
+.strip-item p { font-family: var(--font-body); font-size: 0.8rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
 
 .home-hero { min-height: 92vh; display: flex; flex-direction: column; justify-content: flex-end; }
 
@@ -667,18 +663,19 @@ hr.divider {
   gap: 1rem;
   user-select: none;
 }
-.faq-q .faq-icon { color: var(--brand-accent); font-size: 1.2rem; flex-shrink: 0; transition: transform 0.2s; }
-.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-q .faq-icon { color: var(--ink); font-size: 1.2rem; flex-shrink: 0; transition: transform 0.2s; }
+.faq-item[open] .faq-icon { transform: rotate(45deg); }
 .faq-a {
   font-family: var(--font-body);
   font-size: 0.88rem;
   color: var(--ink-soft);
   line-height: 1.75;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.2s;
+  padding-top: 1rem;
+  max-width: 65ch;
 }
-.faq-item.open .faq-a { max-height: 300px; padding-top: 1rem; }
+.faq-q { list-style: none; }
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q-text { font: inherit; color: inherit; margin: 0; }
 
 /* Om oss */
 .about-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: start; margin-top: 3rem; }
@@ -822,3 +819,75 @@ hr.divider {
 .pc-features svg { width: 34px; height: 34px; flex: none; padding: 6px; border-radius: 8px; border: 1px solid var(--brand-accent); background: rgba(201,168,76,0.12); color: var(--brand-dark); fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .pc-features .pf-off { color: var(--ink-soft); text-decoration: line-through; }
 .pc-features .pf-off svg { border: 1px dashed #b5b2a8; background: none; color: #767676; }
+
+/* ─── TILGJENGELIGHET ─── */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 300;
+  background: var(--brand-accent);
+  color: var(--brand-dark);
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.skip-link:focus { top: 0.75rem; }
+main:focus { outline: none; }
+
+/* Tydelig fokusmarkering for tastatur, på lys og mørk bakgrunn */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--brand-dark);
+  outline-offset: 3px;
+}
+.site-nav a:focus-visible,
+.site-nav button:focus-visible,
+.dark-hero a:focus-visible,
+.cta-band a:focus-visible,
+.site-footer a:focus-visible,
+.profile-card a:focus-visible {
+  outline-color: var(--brand-accent-light);
+}
+
+/* Etiketter på lys bakgrunn: gull holder ikke som tekst (2,2:1), så teksten er mørk og gullet er en strek foran */
+.light-section .section-label,
+.industries .section-label,
+.tl-meta,
+.rc-freq,
+.wh-title {
+  color: var(--ink-soft);
+}
+.light-section .section-label::before,
+.industries .section-label::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 2px;
+  background: var(--brand-accent);
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+
+/* Overskriftselementer som før var avsnitt */
+h2.wh-title, h3.rc-title, h3.value-title, h2.success-title { margin-top: 0; }
+
+/* Skjema */
+.form-group label .req { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--ink-muted); }
+.form-consent { font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.75rem; }
+.form-error {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #a12a2a;
+  border-radius: 4px;
+  background: #fbeeee;
+  color: #7a1f1f;
+  font-size: 0.85rem;
+}
+.form-error a { color: inherit; }

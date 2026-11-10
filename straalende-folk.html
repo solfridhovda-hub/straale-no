@@ -1,28 +1,271 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Straalende folk | Straale</title>
-  <meta name="description" content="Straale er Solfrid Straale Fjalestad i Moss. Snart ti år med digital markedsføring, og én person å ringe for Google-profil, nettside og sosiale medier." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Straale er Solfrid Straale Fjalestad i Moss. Snart ti år med digital markedsføring, og én person å ringe for nettside, sosiale medier og Google-profil." />
+  <link rel="canonical" href="https://straale.no/straalende-folk" />
+  <meta name="theme-color" content="#0D1B2A" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:site_name" content="Straale" />
+  <meta property="og:title" content="Straalende folk | Straale" />
+  <meta property="og:description" content="Straale er Solfrid Straale Fjalestad i Moss. Snart ti år med digital markedsføring, og én person å ringe for nettside, sosiale medier og Google-profil." />
+  <meta property="og:url" content="https://straale.no/straalende-folk" />
+  <meta property="og:image" content="https://straale.no/bilder/og-straale.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ordmerket straale på midnattsblå bakgrunn" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" href="/css/fonter/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/css/fonter/fraunces-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": [
+          "ProfessionalService",
+          "Organization"
+        ],
+        "@id": "https://straale.no/#bedrift",
+        "name": "Straale",
+        "url": "https://straale.no/",
+        "logo": "https://straale.no/bilder/logo/android-512.png",
+        "image": "https://straale.no/bilder/og-straale.jpg",
+        "description": "Straale lager og drifter nettside, sosiale medier og Google-profil for etablerte lokale bedrifter i Moss og Østfold. Fast månedspris, ingen bindingstid.",
+        "telephone": "+47 997 77 640",
+        "email": "post@straale.no",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Moss",
+          "addressRegion": "Østfold",
+          "addressCountry": "NO"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Moss"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Østfold"
+          }
+        ],
+        "founder": {
+          "@id": "https://straale.no/straalende-folk#solfrid"
+        },
+        "knowsLanguage": "nb",
+        "priceRange": "2 500 til 10 000 kr per måned eks. mva.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Pakker",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Synlig",
+              "description": "Nettside med hosting og drift.",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 2500,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 2500,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 20000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Synlig",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Tydelig",
+              "description": "Nettside, Facebook, Instagram, LinkedIn og månedlig rapport.",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 5000,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 5000,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 30000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Tydelig",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Strålende",
+              "description": "Alt i Tydelig, pluss Google-profil (Google Business Profile).",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 10000,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 10000,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 50000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Strålende",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://straale.no/#nettsted",
+        "url": "https://straale.no/",
+        "name": "Straale",
+        "inLanguage": "nb",
+        "publisher": {
+          "@id": "https://straale.no/#bedrift"
+        }
+      },
+      {
+        "@type": [
+          "WebPage",
+          "AboutPage"
+        ],
+        "@id": "https://straale.no/straalende-folk#side",
+        "url": "https://straale.no/straalende-folk",
+        "name": "Straalende folk | Straale",
+        "description": "Straale er Solfrid Straale Fjalestad i Moss. Snart ti år med digital markedsføring, og én person å ringe for nettside, sosiale medier og Google-profil.",
+        "inLanguage": "nb",
+        "isPartOf": {
+          "@id": "https://straale.no/#nettsted"
+        },
+        "about": {
+          "@id": "https://straale.no/#bedrift"
+        },
+        "breadcrumb": {
+          "@id": "https://straale.no/straalende-folk#smuler"
+        },
+        "mainEntity": {
+          "@id": "https://straale.no/straalende-folk#solfrid"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://straale.no/straalende-folk#smuler",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hjem",
+            "item": "https://straale.no/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Straalende folk",
+            "item": "https://straale.no/straalende-folk"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://straale.no/straalende-folk#solfrid",
+        "name": "Solfrid Straale Fjalestad",
+        "jobTitle": "Grunnlegger, digital markedsfører og tekstforfatter",
+        "worksFor": {
+          "@id": "https://straale.no/#bedrift"
+        },
+        "image": "https://straale.no/bilder/solfrid-900.webp",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Moss",
+          "addressCountry": "NO"
+        },
+        "url": "https://straale.no/straalende-folk"
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="page-body">
+  <a class="skip-link" href="#innhold">Hopp til innholdet</a>
 
-  <nav class="site-nav">
-    <a class="nav-logo" href="index.html">Straale<span class="dot">.</span></a>
+  <nav class="site-nav" aria-label="Hovedmeny">
+    <a class="nav-logo" href="/"><img src="/bilder/logo/straale-ordmerke-negativ.svg" alt="Straale, til forsiden" width="104" height="24" /></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Hjem</a></li>
-      <li><a href="slik-fungerer-det.html">Slik fungerer det</a></li>
-      <li><a href="straalende-folk.html" class="active">Straalende folk</a></li>
-      <li><a href="kontakt.html" class="nav-cta">Ta kontakt</a></li>
+      <li><a href="/">Hjem</a></li>
+      <li><a href="/slik-fungerer-det">Slik fungerer det</a></li>
+      <li><a href="/straalende-folk" class="active" aria-current="page">Straalende folk</a></li>
+      <li><a href="/kontakt" class="nav-cta">Ta kontakt</a></li>
     </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Meny">
-      <span></span><span></span><span></span>
+    <button class="nav-hamburger" id="hamburger" type="button" aria-label="Meny" aria-expanded="false" aria-controls="navLinks">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
     </button>
   </nav>
+
+  <main id="innhold" tabindex="-1">
 
   <div class="dark-hero">
     <div class="hero-inner">
@@ -38,13 +281,13 @@
       <div class="about-intro">
         <div class="about-text">
           <p>Jeg startet Straale fordi jeg så det samme gang på gang: dyktige lokale bedrifter som nesten ikke fantes på nett. Store byråer er for dyre for dem. Frilansere tar enkeltoppdrag og forsvinner. Og å ansette noen er et stort steg.</p>
-          <p>Så jeg gjør det grunnleggende, og jeg gjør det jevnt: Google-profilen, anmeldelsene, nettsiden og et oppdatert inntrykk når noen sjekker deg ut. Ikke likes for likenes skyld.</p>
+          <p>Så jeg gjør det grunnleggende, og jeg gjør det jevnt: en nettside som svarer på det kundene lurer på, sosiale medier som viser at dere er i drift, og for dem som vil, en Google-profil som er i orden. Ikke likes for likenes skyld.</p>
           <p>Jeg tar bare et begrenset antall kunder om gangen, så jeg har tid til hver av dem.</p>
         </div>
 
         <div>
           <div class="profile-card">
-            <img class="profile-photo" src="bilder/solfrid.jpg" alt="Solfrid Straale Fjalestad" width="900" height="974" loading="lazy" />
+            <img class="profile-photo" src="/bilder/solfrid-900.webp" srcset="/bilder/solfrid-450.webp 450w, /bilder/solfrid-900.webp 900w" sizes="(max-width: 720px) 90vw, 40vw" alt="Portrett av Solfrid Straale Fjalestad" width="900" height="974" loading="lazy" decoding="async" />
             <p class="profile-name">Solfrid Straale Fjalestad</p>
             <p class="profile-role">Grunnlegger · Digital markedsfører og tekstforfatter</p>
             <p class="profile-bio">Snart ti år med digital markedsføring, fra første ansatt i en oppstart til innhold og webdesign for etablerte bedrifter. Tekstforfatter i bunn: ordene på nettsiden din og i innleggene skriver jeg selv. Bor i Moss, og ja, Straale er mellomnavnet mitt.</p>
@@ -70,18 +313,18 @@
 
       <div class="values-grid">
         <div class="value-card">
-          <div class="value-num">01</div>
-          <p class="value-title">Ærlig svar, også når det er nei</p>
+          <div class="value-num" aria-hidden="true">01</div>
+          <h3 class="value-title">Ærlig svar, også når det er nei</h3>
           <p class="value-body">Gjennomgangen er en ekte gjennomgang, ikke en salgssamtale. Tror jeg ikke at jeg kan hjelpe deg, sier jeg det.</p>
         </div>
         <div class="value-card">
-          <div class="value-num">02</div>
-          <p class="value-title">Tall du forstår</p>
-          <p class="value-body">Hver måned ser du hva som har skjedd: samtaler, veibeskrivelser og anmeldelser. Fungerer noe ikke, sier jeg det og endrer det.</p>
+          <div class="value-num" aria-hidden="true">02</div>
+          <h3 class="value-title">Tall du forstår</h3>
+          <p class="value-body">I Tydelig og Strålende får du en kort rapport hver måned som viser hva som har skjedd. Fungerer noe ikke, sier jeg det og endrer det.</p>
         </div>
         <div class="value-card">
-          <div class="value-num">03</div>
-          <p class="value-title">Én person å ringe</p>
+          <div class="value-num" aria-hidden="true">03</div>
+          <h3 class="value-title">Én person å ringe</h3>
           <p class="value-body">Du slipper prosjektledere og underleverandører. Det er meg du snakker med, hver gang.</p>
         </div>
       </div>
@@ -94,23 +337,25 @@
         <h2>Vil du ta en prat?</h2>
         <p>Ta kontakt. Holder du til i nærheten, kommer jeg gjerne innom.</p>
       </div>
-      <a class="btn-gold" href="kontakt.html">Ta kontakt</a>
+      <a class="btn-gold" href="/kontakt">Ta kontakt</a>
     </div>
   </div>
+
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-contact">
-        <a class="footer-logo" href="index.html">Straale<span class="dot">.</span></a>
+        <a class="footer-logo" href="/"><img src="/bilder/logo/straale-ordmerke-negativ.svg" alt="Straale, til forsiden" width="96" height="22" loading="lazy" /></a>
         <p>Solfrid Straale Fjalestad · Moss</p>
         <p><a href="tel:+4799777640">Telefon 997 77 640</a></p>
-        <!-- Straale-e-post legges inn her når den er satt opp -->
+        <p><a href="mailto:post@straale.no">post@straale.no</a></p>
       </div>
-      <nav class="footer-links">
-        <a href="slik-fungerer-det.html">Slik fungerer det</a>
-        <a href="straalende-folk.html">Straalende folk</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="personvern.html">Personvern</a>
+      <nav class="footer-links" aria-label="Bunnmeny">
+        <a href="/slik-fungerer-det">Slik fungerer det</a>
+        <a href="/straalende-folk">Straalende folk</a>
+        <a href="/kontakt">Kontakt</a>
+        <a href="/personvern">Personvern</a>
       </nav>
       <p class="footer-copy">© 2026 Straale · Moss og Østfold</p>
     </div>

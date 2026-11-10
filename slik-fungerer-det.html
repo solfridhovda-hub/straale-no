@@ -1,28 +1,334 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Slik fungerer det | Straale</title>
   <meta name="description" content="Oppstarten tar fire til fem uker. Her ser du hva som skjer, hvordan en vanlig måned ser ut, og svar på det jeg oftest får spørsmål om." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="canonical" href="https://straale.no/slik-fungerer-det" />
+  <meta name="theme-color" content="#0D1B2A" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:site_name" content="Straale" />
+  <meta property="og:title" content="Slik fungerer det | Straale" />
+  <meta property="og:description" content="Oppstarten tar fire til fem uker. Her ser du hva som skjer, hvordan en vanlig måned ser ut, og svar på det jeg oftest får spørsmål om." />
+  <meta property="og:url" content="https://straale.no/slik-fungerer-det" />
+  <meta property="og:image" content="https://straale.no/bilder/og-straale.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ordmerket straale på midnattsblå bakgrunn" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" href="/css/fonter/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/css/fonter/fraunces-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": [
+          "ProfessionalService",
+          "Organization"
+        ],
+        "@id": "https://straale.no/#bedrift",
+        "name": "Straale",
+        "url": "https://straale.no/",
+        "logo": "https://straale.no/bilder/logo/android-512.png",
+        "image": "https://straale.no/bilder/og-straale.jpg",
+        "description": "Straale lager og drifter nettside, sosiale medier og Google-profil for etablerte lokale bedrifter i Moss og Østfold. Fast månedspris, ingen bindingstid.",
+        "telephone": "+47 997 77 640",
+        "email": "post@straale.no",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Moss",
+          "addressRegion": "Østfold",
+          "addressCountry": "NO"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Moss"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Østfold"
+          }
+        ],
+        "founder": {
+          "@id": "https://straale.no/straalende-folk#solfrid"
+        },
+        "knowsLanguage": "nb",
+        "priceRange": "2 500 til 10 000 kr per måned eks. mva.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Pakker",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Synlig",
+              "description": "Nettside med hosting og drift.",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 2500,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 2500,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 20000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Synlig",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Tydelig",
+              "description": "Nettside, Facebook, Instagram, LinkedIn og månedlig rapport.",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 5000,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 5000,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 30000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Tydelig",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Strålende",
+              "description": "Alt i Tydelig, pluss Google-profil (Google Business Profile).",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 10000,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 10000,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 50000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Strålende",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://straale.no/#nettsted",
+        "url": "https://straale.no/",
+        "name": "Straale",
+        "inLanguage": "nb",
+        "publisher": {
+          "@id": "https://straale.no/#bedrift"
+        }
+      },
+      {
+        "@type": [
+          "WebPage",
+          "FAQPage"
+        ],
+        "@id": "https://straale.no/slik-fungerer-det#side",
+        "url": "https://straale.no/slik-fungerer-det",
+        "name": "Slik fungerer det | Straale",
+        "description": "Oppstarten tar fire til fem uker. Her ser du hva som skjer, hvordan en vanlig måned ser ut, og svar på det jeg oftest får spørsmål om.",
+        "inLanguage": "nb",
+        "isPartOf": {
+          "@id": "https://straale.no/#nettsted"
+        },
+        "about": {
+          "@id": "https://straale.no/#bedrift"
+        },
+        "breadcrumb": {
+          "@id": "https://straale.no/slik-fungerer-det#smuler"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Trenger jeg nettside, eller holder det med Google og Facebook?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ikke alltid. Har du en enkel bedrift der folk finner deg via Google-profilen, klarer du deg lenge uten. Men en nettside gir deg noe en profil ikke kan: et sted som er helt ditt, som ikke endrer regler over natten. For de fleste lokale bedrifter lønner det seg å ha begge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvordan blir jeg synlig på Google?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Det betyr ikke å ligge øverst i alle søk. Det betyr at nettsiden din svarer på det folk leter etter, og at Google-profilen har riktig info, nok anmeldelser og bilder som viser hva du driver med. Da finner de som leter etter noen som deg, faktisk fram til deg. Google-profilen er med i Strålende."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvorfor dukker vi ikke opp når folk søker?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oftest er det Google-profilen. Mangler den riktig kategori, åpningstider eller nok anmeldelser, taper du mot dem som har fylt ut sin bedre. Det tar under en time å rydde opp, men de fleste har verken tid eller kunnskap til å gjøre det selv."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hva er forskjellen på Google-profil og nettside?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Google-profilen er det folk ser først: kart, åpningstider, anmeldelser. Nettsiden er der de går når de vil vite mer. Begge trengs, men de gjør ulike jobber."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvor mye tid må jeg bruke på sosiale medier?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ingenting, hvis du ikke vil. Jeg lager og publiserer innleggene, ut fra hva som skjer i bransjen din. Vil du godkjenne før de går ut, gjør du det. Resten tar jeg meg av."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvem svarer på anmeldelser og meldinger?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Det gjør du selv. Jeg bygger profilene og lager innholdet, men svar på anmeldelser, kommentarer og meldinger er din dialog med kundene dine. Det er du som kjenner dem."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Er det bindingstid?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nei. Mange byråer krever 6 eller 12 måneders binding. Hos meg er det én måneds oppsigelse. Arbeidet skal holde deg som kunde, ikke kontrakten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvordan vet jeg om det virker?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Se på hvem som tar kontakt, ikke på følgertall. I Tydelig og Strålende får du en rapport hver måned som viser hvor mange som fant nettsiden via Google, hvor mange som brukte skjemaet, og hvordan innleggene gikk. I Strålende ser du også samtaler og veibeskrivelser fra Google-profilen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hvem eier nettsiden og Google-profilen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Du. Domenet og Google-profilen står alltid i ditt navn, uansett pakke og hvor lenge du er kunde. Slutter du, tar du alt med deg, og jeg hjelper deg å flytte."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Er dette verdt det for en liten bedrift?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, spesielt da. Store bedrifter har egne markedsavdelinger. Du har verken tid eller folk til det, men kundene dine søker på Google akkurat som alle andre. Straale er laget for bedrifter med 3 til 15 ansatte som er gode i faget sitt og trenger noen til å ta seg av synligheten."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://straale.no/slik-fungerer-det#smuler",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hjem",
+            "item": "https://straale.no/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Slik fungerer det",
+            "item": "https://straale.no/slik-fungerer-det"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="page-body">
+  <a class="skip-link" href="#innhold">Hopp til innholdet</a>
 
-  <nav class="site-nav">
-    <a class="nav-logo" href="index.html">Straale<span class="dot">.</span></a>
+  <nav class="site-nav" aria-label="Hovedmeny">
+    <a class="nav-logo" href="/"><img src="/bilder/logo/straale-ordmerke-negativ.svg" alt="Straale, til forsiden" width="104" height="24" /></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Hjem</a></li>
-      <li><a href="slik-fungerer-det.html" class="active">Slik fungerer det</a></li>
-      <li><a href="straalende-folk.html">Straalende folk</a></li>
-      <li><a href="kontakt.html" class="nav-cta">Ta kontakt</a></li>
+      <li><a href="/">Hjem</a></li>
+      <li><a href="/slik-fungerer-det" class="active" aria-current="page">Slik fungerer det</a></li>
+      <li><a href="/straalende-folk">Straalende folk</a></li>
+      <li><a href="/kontakt" class="nav-cta">Ta kontakt</a></li>
     </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Meny">
-      <span></span><span></span><span></span>
+    <button class="nav-hamburger" id="hamburger" type="button" aria-label="Meny" aria-expanded="false" aria-controls="navLinks">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
     </button>
   </nav>
+
+  <main id="innhold" tabindex="-1">
 
   <div class="dark-hero">
     <div class="hero-inner">
@@ -39,7 +345,7 @@
         <div>
           <p class="section-label">Fase 1 · Uke 1-5</p>
           <h2 class="section-heading">Oppstart</h2>
-          <p class="section-body">De første ukene bygger jeg alt fra bunnen av: bildebibliotek, nettside, Google-profil og sosiale medier.</p>
+          <p class="section-body">De første ukene bygger jeg alt fra bunnen av. Nettsiden er med i alle pakkene. Sosiale medier kommer i tillegg i Tydelig og Strålende, og Google-profilen i Strålende.</p>
         </div>
         <div class="timeline">
           <div class="tl-item">
@@ -52,7 +358,7 @@
             <div class="tl-dot"></div>
             <p class="tl-meta">Uke 2-3</p>
             <h3 class="tl-title">Nettside og profiler</h3>
-            <p class="tl-body">Jeg bygger nettsiden, setter opp Google-profilen, gjør klar Facebook og Instagram med de første innleggene, og kobler til Google Analytics og Search Console. Domenet registreres i ditt navn.</p>
+            <p class="tl-body">Jeg bygger nettsiden og kobler den til Google Search Console, så vi ser hvordan folk finner den. Domenet registreres i ditt navn. Har du Tydelig eller Strålende, gjør jeg klar Facebook, Instagram og LinkedIn med de første innleggene. I Strålende setter jeg også opp Google-profilen.</p>
           </div>
           <div class="tl-item">
             <div class="tl-dot"></div>
@@ -64,7 +370,7 @@
             <div class="tl-dot"></div>
             <p class="tl-meta">Uke 5</p>
             <h3 class="tl-title">Lansering</h3>
-            <p class="tl-body">Nettsiden er ute og profilene er i gang. Herfra gjelder den faste månedsprisen.</p>
+            <p class="tl-body">Nettsiden er ute, og profilene som hører til pakken din, er i gang. Herfra gjelder den faste månedsprisen.</p>
           </div>
         </div>
       </div>
@@ -78,27 +384,27 @@
     <div class="light-section-inner">
       <p class="section-label">Fase 2 · Løpende</p>
       <h2 class="section-heading">En vanlig måned</h2>
-      <p class="section-body">Etter lanseringen skjer det noe hver måned, uten at du trenger å tenke på det.</p>
+      <p class="section-body">Hva som skjer etter lanseringen, avhenger av pakken. I Synlig holder jeg nettsiden i drift og oppdatert. I Tydelig og Strålende kommer dette i tillegg, uten at du trenger å tenke på det.</p>
 
       <div class="rhythm-grid">
         <div class="rhythm-card">
-          <p class="rc-freq">Jevnlig</p>
-          <p class="rc-title">Nye innlegg</p>
-          <p class="rc-body">Innlegg på Facebook og Instagram, tilpasset bransjen din og årstiden.</p>
+          <p class="rc-freq">Jevnlig · Tydelig og Strålende</p>
+          <h3 class="rc-title">Nye innlegg</h3>
+          <p class="rc-body">Innlegg på Facebook, Instagram og LinkedIn, tilpasset bransjen din og årstiden.</p>
         </div>
         <div class="rhythm-card">
-          <p class="rc-freq">Løpende</p>
-          <p class="rc-title">Google-profilen holdes oppdatert</p>
+          <p class="rc-freq">Løpende · Strålende</p>
+          <h3 class="rc-title">Google-profilen holdes oppdatert</h3>
           <p class="rc-body">Bilder, innlegg og riktig info, så profilen ser levende ut.</p>
         </div>
         <div class="rhythm-card">
-          <p class="rc-freq">Hver måned</p>
-          <p class="rc-title">Rapport</p>
-          <p class="rc-body">Samtaler og veibeskrivelser fra Google, og hvordan anmeldelsene utvikler seg.</p>
+          <p class="rc-freq">Hver måned · Tydelig og Strålende</p>
+          <h3 class="rc-title">Rapport</h3>
+          <p class="rc-body">Én side med tallene som sier noe: hvor mange som fant nettsiden via Google og hva de søkte på, hvor mange som tok kontakt via skjemaet, og hvordan innleggene nådde ut. I Strålende også visninger, samtaler, veibeskrivelser og nye anmeldelser fra Google-profilen.</p>
         </div>
         <div class="rhythm-card">
-          <p class="rc-freq">Hvert kvartal</p>
-          <p class="rc-title">Møte</p>
+          <p class="rc-freq">Hvert kvartal · Tydelig og Strålende</p>
+          <h3 class="rc-title">Møte</h3>
           <p class="rc-body">Vi oppdaterer bildebiblioteket, planlegger neste sesong og justerer ut fra tallene.</p>
         </div>
       </div>
@@ -114,76 +420,46 @@
       <h2 class="section-heading">Det jeg oftest får spørsmål om</h2>
 
       <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Trenger jeg nettside, eller holder det med Google og Facebook?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Ikke alltid. Har du en enkel bedrift der folk finner deg via Google-profilen, klarer du deg lenge uten. Men en nettside gir deg noe en profil ikke kan: et sted som er helt ditt, som ikke endrer regler over natten. For de fleste lokale bedrifter lønner det seg å ha begge.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Hvordan blir jeg synlig på Google?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Det betyr ikke å ligge øverst i alle søk. Det betyr at Google-profilen din har riktig info, nok anmeldelser og bilder som viser hva du driver med. Da finner de som leter etter noen som deg, faktisk fram til deg.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Hvorfor dukker vi ikke opp når folk søker?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Oftest er det Google-profilen. Mangler den riktig kategori, åpningstider eller nok anmeldelser, taper du mot dem som har fylt ut sin bedre. Det tar under en time å rydde opp, men de fleste har verken tid eller kunnskap til å gjøre det selv.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Hva er forskjellen på Google-profil og nettside?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Google-profilen er det folk ser først: kart, åpningstider, anmeldelser. Nettsiden er der de går når de vil vite mer. Begge trengs, men de gjør ulike jobber.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Hvor mye tid må jeg bruke på sosiale medier?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Ingenting, hvis du ikke vil. Jeg lager og publiserer innleggene, ut fra hva som skjer i bransjen din. Vil du godkjenne før de går ut, gjør du det. Resten tar jeg meg av.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Hvem svarer på anmeldelser og meldinger?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Det gjør du selv. Jeg bygger profilen og innholdet, men svar på anmeldelser, kommentarer og meldinger er din dialog med kundene dine. Det er du som kjenner dem.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Er det bindingstid?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Nei. Mange byråer krever 6 eller 12 måneders binding. Hos meg er det én måneds oppsigelse. Arbeidet skal holde deg som kunde, ikke kontrakten.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Hvordan vet jeg om det virker?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Se på samtaler og veibeskrivelser fra Google-profilen din, ikke følgertall. Det er de tallene som sier noe om hvem som tar kontakt. Du får en enkel rapport hver måned.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Hvem eier nettsiden og Google-profilen?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Du. Domenet og Google-profilen står alltid i ditt navn, uansett hvor lenge du er kunde. Slutter du, tar du alt med deg, og jeg hjelper deg å flytte.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            Er dette verdt det for en liten bedrift?
-            <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-a">Ja, spesielt da. Store bedrifter har egne markedsavdelinger. Du har verken tid eller folk til det, men kundene dine søker på Google akkurat som alle andre. Straale er laget for bedrifter med 3 til 15 ansatte som er gode i faget sitt og trenger noen til å ta seg av synligheten.</div>
-        </div>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Trenger jeg nettside, eller holder det med Google og Facebook?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Ikke alltid. Har du en enkel bedrift der folk finner deg via Google-profilen, klarer du deg lenge uten. Men en nettside gir deg noe en profil ikke kan: et sted som er helt ditt, som ikke endrer regler over natten. For de fleste lokale bedrifter lønner det seg å ha begge.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Hvordan blir jeg synlig på Google?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Det betyr ikke å ligge øverst i alle søk. Det betyr at nettsiden din svarer på det folk leter etter, og at Google-profilen har riktig info, nok anmeldelser og bilder som viser hva du driver med. Da finner de som leter etter noen som deg, faktisk fram til deg. Google-profilen er med i Strålende.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Hvorfor dukker vi ikke opp når folk søker?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Oftest er det Google-profilen. Mangler den riktig kategori, åpningstider eller nok anmeldelser, taper du mot dem som har fylt ut sin bedre. Det tar under en time å rydde opp, men de fleste har verken tid eller kunnskap til å gjøre det selv.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Hva er forskjellen på Google-profil og nettside?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Google-profilen er det folk ser først: kart, åpningstider, anmeldelser. Nettsiden er der de går når de vil vite mer. Begge trengs, men de gjør ulike jobber.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Hvor mye tid må jeg bruke på sosiale medier?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Ingenting, hvis du ikke vil. Jeg lager og publiserer innleggene, ut fra hva som skjer i bransjen din. Vil du godkjenne før de går ut, gjør du det. Resten tar jeg meg av.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Hvem svarer på anmeldelser og meldinger?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Det gjør du selv. Jeg bygger profilene og lager innholdet, men svar på anmeldelser, kommentarer og meldinger er din dialog med kundene dine. Det er du som kjenner dem.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Er det bindingstid?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Nei. Mange byråer krever 6 eller 12 måneders binding. Hos meg er det én måneds oppsigelse. Arbeidet skal holde deg som kunde, ikke kontrakten.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Hvordan vet jeg om det virker?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Se på hvem som tar kontakt, ikke på følgertall. I Tydelig og Strålende får du en rapport hver måned som viser hvor mange som fant nettsiden via Google, hvor mange som brukte skjemaet, og hvordan innleggene gikk. I Strålende ser du også samtaler og veibeskrivelser fra Google-profilen.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Hvem eier nettsiden og Google-profilen?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Du. Domenet og Google-profilen står alltid i ditt navn, uansett pakke og hvor lenge du er kunde. Slutter du, tar du alt med deg, og jeg hjelper deg å flytte.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q"><h3 class="faq-q-text">Er dette verdt det for en liten bedrift?</h3><span class="faq-icon" aria-hidden="true">+</span></summary>
+          <div class="faq-a"><p>Ja, spesielt da. Store bedrifter har egne markedsavdelinger. Du har verken tid eller folk til det, men kundene dine søker på Google akkurat som alle andre. Straale er laget for bedrifter med 3 til 15 ansatte som er gode i faget sitt og trenger noen til å ta seg av synligheten.</p></div>
+        </details>
       </div>
     </div>
   </section>
@@ -194,32 +470,29 @@
         <h2>Vil du se hva som mangler?</h2>
         <p>Ta kontakt. Vi tar en prat på 30 minutter, og du bestemmer selv hva du gjør etterpå.</p>
       </div>
-      <a class="btn-gold" href="kontakt.html">Ta kontakt</a>
+      <a class="btn-gold" href="/kontakt">Ta kontakt</a>
     </div>
   </div>
+
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-contact">
-        <a class="footer-logo" href="index.html">Straale<span class="dot">.</span></a>
+        <a class="footer-logo" href="/"><img src="/bilder/logo/straale-ordmerke-negativ.svg" alt="Straale, til forsiden" width="96" height="22" loading="lazy" /></a>
         <p>Solfrid Straale Fjalestad · Moss</p>
         <p><a href="tel:+4799777640">Telefon 997 77 640</a></p>
-        <!-- Straale-e-post legges inn her når den er satt opp -->
+        <p><a href="mailto:post@straale.no">post@straale.no</a></p>
       </div>
-      <nav class="footer-links">
-        <a href="slik-fungerer-det.html">Slik fungerer det</a>
-        <a href="straalende-folk.html">Straalende folk</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="personvern.html">Personvern</a>
+      <nav class="footer-links" aria-label="Bunnmeny">
+        <a href="/slik-fungerer-det">Slik fungerer det</a>
+        <a href="/straalende-folk">Straalende folk</a>
+        <a href="/kontakt">Kontakt</a>
+        <a href="/personvern">Personvern</a>
       </nav>
       <p class="footer-copy">© 2026 Straale · Moss og Østfold</p>
     </div>
   </footer>
   <script src="js/nav.js"></script>
-  <script>
-    function toggleFaq(el) {
-      el.parentElement.classList.toggle('open');
-    }
-  </script>
 </body>
 </html>

@@ -1,28 +1,252 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ta kontakt | Straale</title>
   <meta name="description" content="30 minutter der jeg ser på Google-profilen, nettsiden og sosiale medier dine, og sier ærlig hva jeg ser. På video, eller jeg kommer innom." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="canonical" href="https://straale.no/kontakt" />
+  <meta name="theme-color" content="#0D1B2A" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:site_name" content="Straale" />
+  <meta property="og:title" content="Ta kontakt | Straale" />
+  <meta property="og:description" content="30 minutter der jeg ser på Google-profilen, nettsiden og sosiale medier dine, og sier ærlig hva jeg ser. På video, eller jeg kommer innom." />
+  <meta property="og:url" content="https://straale.no/kontakt" />
+  <meta property="og:image" content="https://straale.no/bilder/og-straale.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Ordmerket straale på midnattsblå bakgrunn" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" href="/css/fonter/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/css/fonter/fraunces-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": [
+          "ProfessionalService",
+          "Organization"
+        ],
+        "@id": "https://straale.no/#bedrift",
+        "name": "Straale",
+        "url": "https://straale.no/",
+        "logo": "https://straale.no/bilder/logo/android-512.png",
+        "image": "https://straale.no/bilder/og-straale.jpg",
+        "description": "Straale lager og drifter nettside, sosiale medier og Google-profil for etablerte lokale bedrifter i Moss og Østfold. Fast månedspris, ingen bindingstid.",
+        "telephone": "+47 997 77 640",
+        "email": "post@straale.no",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Moss",
+          "addressRegion": "Østfold",
+          "addressCountry": "NO"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Moss"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Østfold"
+          }
+        ],
+        "founder": {
+          "@id": "https://straale.no/straalende-folk#solfrid"
+        },
+        "knowsLanguage": "nb",
+        "priceRange": "2 500 til 10 000 kr per måned eks. mva.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Pakker",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Synlig",
+              "description": "Nettside med hosting og drift.",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 2500,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 2500,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 20000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Synlig",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Tydelig",
+              "description": "Nettside, Facebook, Instagram, LinkedIn og månedlig rapport.",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 5000,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 5000,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 30000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Tydelig",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Strålende",
+              "description": "Alt i Tydelig, pluss Google-profil (Google Business Profile).",
+              "url": "https://straale.no/#pris",
+              "priceCurrency": "NOK",
+              "price": 10000,
+              "priceSpecification": [
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 10000,
+                  "priceCurrency": "NOK",
+                  "unitText": "per måned",
+                  "unitCode": "MON",
+                  "valueAddedTaxIncluded": false
+                },
+                {
+                  "@type": "UnitPriceSpecification",
+                  "price": 50000,
+                  "priceCurrency": "NOK",
+                  "name": "Etablering, engangsbeløp",
+                  "valueAddedTaxIncluded": false
+                }
+              ],
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Strålende",
+                "provider": {
+                  "@id": "https://straale.no/#bedrift"
+                },
+                "areaServed": {
+                  "@type": "AdministrativeArea",
+                  "name": "Østfold"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://straale.no/#nettsted",
+        "url": "https://straale.no/",
+        "name": "Straale",
+        "inLanguage": "nb",
+        "publisher": {
+          "@id": "https://straale.no/#bedrift"
+        }
+      },
+      {
+        "@type": [
+          "WebPage",
+          "ContactPage"
+        ],
+        "@id": "https://straale.no/kontakt#side",
+        "url": "https://straale.no/kontakt",
+        "name": "Ta kontakt | Straale",
+        "description": "30 minutter der jeg ser på Google-profilen, nettsiden og sosiale medier dine, og sier ærlig hva jeg ser. På video, eller jeg kommer innom.",
+        "inLanguage": "nb",
+        "isPartOf": {
+          "@id": "https://straale.no/#nettsted"
+        },
+        "about": {
+          "@id": "https://straale.no/#bedrift"
+        },
+        "breadcrumb": {
+          "@id": "https://straale.no/kontakt#smuler"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://straale.no/kontakt#smuler",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hjem",
+            "item": "https://straale.no/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Ta kontakt",
+            "item": "https://straale.no/kontakt"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="page-body">
+  <a class="skip-link" href="#innhold">Hopp til innholdet</a>
 
-  <nav class="site-nav">
-    <a class="nav-logo" href="index.html">Straale<span class="dot">.</span></a>
+  <nav class="site-nav" aria-label="Hovedmeny">
+    <a class="nav-logo" href="/"><img src="/bilder/logo/straale-ordmerke-negativ.svg" alt="Straale, til forsiden" width="104" height="24" /></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Hjem</a></li>
-      <li><a href="slik-fungerer-det.html">Slik fungerer det</a></li>
-      <li><a href="straalende-folk.html">Straalende folk</a></li>
-      <li><a href="kontakt.html" class="nav-cta active">Ta kontakt</a></li>
+      <li><a href="/">Hjem</a></li>
+      <li><a href="/slik-fungerer-det">Slik fungerer det</a></li>
+      <li><a href="/straalende-folk">Straalende folk</a></li>
+      <li><a href="/kontakt" class="nav-cta active" aria-current="page">Ta kontakt</a></li>
     </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Meny">
-      <span></span><span></span><span></span>
+    <button class="nav-hamburger" id="hamburger" type="button" aria-label="Meny" aria-expanded="false" aria-controls="navLinks">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
     </button>
   </nav>
+
+  <main id="innhold" tabindex="-1">
 
   <div class="dark-hero" style="padding-bottom: 5rem;">
     <div class="hero-inner">
@@ -40,23 +264,23 @@
           <p>Du går fra møtet med noe du kan bruke, uansett om du blir kunde eller ikke.</p>
 
           <div class="contact-direct">
-            <p class="wh-title">Heller ringe?</p>
+            <h2 class="wh-title">Heller ringe eller sende e-post?</h2>
             <p><a href="tel:+4799777640">Telefon 997 77 640</a></p>
-            <!-- Straale-e-post legges inn her når den er satt opp -->
+            <p><a href="mailto:post@straale.no">post@straale.no</a></p>
           </div>
 
           <div class="what-happens">
-            <p class="wh-title">Hva skjer etter at du sender skjemaet</p>
+            <h2 class="wh-title">Hva skjer etter at du sender skjemaet</h2>
             <div class="wh-step">
-              <span class="wh-step-num">1</span>
+              <span class="wh-step-num" aria-hidden="true">1</span>
               <p class="wh-step-text"><strong>Du hører fra meg innen én virkedag,</strong> og vi finner et tidspunkt som passer.</p>
             </div>
             <div class="wh-step">
-              <span class="wh-step-num">2</span>
+              <span class="wh-step-num" aria-hidden="true">2</span>
               <p class="wh-step-text"><strong>Vi tar gjennomgangen.</strong> Jeg viser deg hva som fungerer, hva som ikke gjør det, og hva konkurrentene gjør bedre.</p>
             </div>
             <div class="wh-step">
-              <span class="wh-step-num">3</span>
+              <span class="wh-step-num" aria-hidden="true">3</span>
               <p class="wh-step-text"><strong>Du bestemmer selv.</strong> Jeg ringer ikke etter med mindre du vil. Vil du gå videre, setter vi i gang oppstarten.</p>
             </div>
           </div>
@@ -67,30 +291,31 @@
           <p class="form-card-sub">Tar under to minutter å fylle ut.</p>
 
           <!-- Skjemaet bruker Netlify Forms. Innsendinger vises i Netlify under Forms,
-               og du setter opp e-postvarsel der. Ingen tredjepartskonto trengs. -->
+               og Netlify sender e-postvarsel ved hver innsending. Endres oppsettet,
+               må personvern.html oppdateres samtidig. -->
           <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/">
             <input type="hidden" name="form-name" value="contact" />
-            <p style="display:none">
-              <label>Ikke fyll ut dette feltet: <input name="bot-field" /></label>
+            <p hidden>
+              <label>Ikke fyll ut dette feltet: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
             </p>
             <div id="formArea">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Navn</label>
-                  <input type="text" id="name" name="navn" placeholder="Kari Nordmann" required />
+                  <label for="name">Navn <span class="req">(må fylles ut)</span></label>
+                  <input type="text" id="name" name="navn" placeholder="Kari Nordmann" autocomplete="name" required />
                 </div>
                 <div class="form-group">
                   <label for="phone">Telefon</label>
-                  <input type="tel" id="phone" name="telefon" placeholder="900 00 000" />
+                  <input type="tel" id="phone" name="telefon" placeholder="900 00 000" autocomplete="tel" />
                 </div>
               </div>
               <div class="form-group">
-                <label for="email">E-post</label>
-                <input type="email" id="email" name="epost" placeholder="kari@bedriften.no" required />
+                <label for="email">E-post <span class="req">(må fylles ut)</span></label>
+                <input type="email" id="email" name="epost" placeholder="kari@bedriften.no" autocomplete="email" required />
               </div>
               <div class="form-group">
-                <label for="business">Bedriftsnavn</label>
-                <input type="text" id="business" name="bedrift" placeholder="Nordmann Rør AS" required />
+                <label for="business">Bedriftsnavn <span class="req">(må fylles ut)</span></label>
+                <input type="text" id="business" name="bedrift" placeholder="Nordmann Rør AS" autocomplete="organization" required />
               </div>
               <div class="form-group">
                 <label for="industry">Bransje</label>
@@ -111,20 +336,21 @@
               </div>
               <div class="form-group">
                 <label for="web">Nettside (hvis du har en)</label>
-                <input type="text" id="web" name="nettside" placeholder="www.bedriften.no" />
+                <input type="text" id="web" name="nettside" placeholder="www.bedriften.no" autocomplete="url" />
               </div>
               <div class="form-group">
-                <label for="msg">Noe du vil si på forhånd? <span style="font-weight:400; color:var(--ink-muted)">(valgfritt)</span></label>
+                <label for="msg">Noe du vil si på forhånd? <span class="req">(valgfritt)</span></label>
                 <textarea id="msg" name="melding" placeholder="F.eks. hva som bekymrer deg mest digitalt, eller hva du har prøvd tidligere..."></textarea>
               </div>
               <button class="btn-submit" type="submit">Send</button>
-              <p class="form-consent" style="font-size:0.8rem; color:var(--ink-muted); margin-top:0.75rem;">Ved å sende inn samtykker du til at jeg lagrer opplysningene for å kontakte deg. Les mer i <a href="personvern.html">personvernerklæringen</a>.</p>
+              <p class="form-error" id="formError" role="alert" hidden>Noe gikk galt, og skjemaet ble ikke sendt. Prøv igjen, eller ring meg på <a href="tel:+4799777640">997 77 640</a>.</p>
+              <p class="form-consent">Opplysningene du sender, bruker jeg bare til å svare deg. Les mer i <a href="/personvern">personvernerklæringen</a>.</p>
             </div>
           </form>
 
-          <div class="success-state" id="successState">
-            <div class="success-icon">✓</div>
-            <h3 class="success-title">Takk, jeg tar kontakt!</h3>
+          <div class="success-state" id="successState" tabindex="-1">
+            <div class="success-icon" aria-hidden="true">✓</div>
+            <h2 class="success-title">Takk, jeg tar kontakt!</h2>
             <p class="success-body">Du hører fra meg innen én virkedag, så finner vi et tidspunkt for gjennomgangen.</p>
           </div>
         </div>
@@ -132,19 +358,21 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-contact">
-        <a class="footer-logo" href="index.html">Straale<span class="dot">.</span></a>
+        <a class="footer-logo" href="/"><img src="/bilder/logo/straale-ordmerke-negativ.svg" alt="Straale, til forsiden" width="96" height="22" loading="lazy" /></a>
         <p>Solfrid Straale Fjalestad · Moss</p>
         <p><a href="tel:+4799777640">Telefon 997 77 640</a></p>
-        <!-- Straale-e-post legges inn her når den er satt opp -->
+        <p><a href="mailto:post@straale.no">post@straale.no</a></p>
       </div>
-      <nav class="footer-links">
-        <a href="slik-fungerer-det.html">Slik fungerer det</a>
-        <a href="straalende-folk.html">Straalende folk</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="personvern.html">Personvern</a>
+      <nav class="footer-links" aria-label="Bunnmeny">
+        <a href="/slik-fungerer-det">Slik fungerer det</a>
+        <a href="/straalende-folk">Straalende folk</a>
+        <a href="/kontakt">Kontakt</a>
+        <a href="/personvern">Personvern</a>
       </nav>
       <p class="footer-copy">© 2026 Straale · Moss og Østfold</p>
     </div>
@@ -152,6 +380,10 @@
   <script src="js/nav.js"></script>
   <script>
     const form = document.getElementById('contactForm');
+    function visFeil() {
+      const feil = document.getElementById('formError');
+      feil.hidden = false;
+    }
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       const data = new URLSearchParams(new FormData(form));
@@ -162,13 +394,15 @@
           body: data.toString()
         });
         if (response.ok) {
-          document.getElementById('formArea').style.display = 'none';
-          document.getElementById('successState').style.display = 'block';
+          form.hidden = true;
+          const ok = document.getElementById('successState');
+          ok.style.display = 'block';
+          ok.focus();
         } else {
-          alert('Noe gikk galt. Prøv igjen, eller ring meg på 997 77 640.');
+          visFeil();
         }
       } catch (error) {
-        alert('Noe gikk galt. Prøv igjen, eller ring meg på 997 77 640.');
+        visFeil();
       }
     });
   </script>
