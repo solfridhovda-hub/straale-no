@@ -383,9 +383,18 @@
     function visFeil() {
       const feil = document.getElementById('formError');
       feil.hidden = false;
+      sender = false;
+      knapp.disabled = false;
+      knapp.textContent = 'Send';
     }
+    const knapp = form.querySelector('.btn-submit');
+    let sender = false;
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
+      if (sender) return;
+      sender = true;
+      knapp.disabled = true;
+      knapp.textContent = 'Sender...';
       const data = new URLSearchParams(new FormData(form));
       try {
         const response = await fetch('/', {
