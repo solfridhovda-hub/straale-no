@@ -856,23 +856,13 @@ textarea:focus-visible {
   outline-color: var(--brand-accent-light);
 }
 
-/* Etiketter på lys bakgrunn: gull holder ikke som tekst (2,2:1), så teksten er mørk og gullet er en strek foran */
+/* Etiketter på lys bakgrunn: gull holder ikke som tekst (2,2:1), så teksten er mørk. Ingen strek som pynt. */
 .light-section .section-label,
 .industries .section-label,
 .tl-meta,
 .rc-freq,
 .wh-title {
   color: var(--ink-soft);
-}
-.light-section .section-label::before,
-.industries .section-label::before {
-  content: '';
-  display: inline-block;
-  width: 1.5rem;
-  height: 2px;
-  background: var(--brand-accent);
-  vertical-align: middle;
-  margin-right: 0.6rem;
 }
 
 /* Overskriftselementer som før var avsnitt */
