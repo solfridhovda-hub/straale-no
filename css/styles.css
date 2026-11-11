@@ -36,6 +36,7 @@
   --ink-soft: #4a4a4a;
   --ink-muted: #6b6b6b;      /* 5,1:1 mot off-white, holder WCAG AA */
   --rule: #e2e0da;
+  --field-border: #8a877f;   /* Kant på skjemafelt: 3,6:1 mot hvit, WCAG krever 3:1 */
   --rule-dark: rgba(255,255,255,0.1);
   --green: #1a6b3c;
 }
@@ -403,7 +404,7 @@ hr.divider {
 .form-group select,
 .form-group textarea {
   background: var(--white);
-  border: 1px solid var(--rule);
+  border: 1px solid var(--field-border);
   border-radius: 4px;
   padding: 0.8rem 1rem;
   font-size: 0.9rem;
@@ -881,3 +882,33 @@ h2.wh-title, h3.rc-title, h3.value-title, h2.success-title { margin-top: 0; }
   font-size: 0.85rem;
 }
 .form-error a { color: inherit; }
+
+/* ─── FLERSTEGS KONTAKTSKJEMA ───
+   Uten JavaScript vises alle stegene under hverandre som ett vanlig skjema. */
+#contactForm [hidden] { display: none !important; }
+.steg { border: 0; padding: 0; margin: 0 0 2rem; min-width: 0; }
+.flersteg .steg { margin-bottom: 0; }
+.steg-sporsmal { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 400; line-height: 1.3; color: var(--ink); padding: 0; margin-bottom: 0.4rem; }
+.steg-sporsmal:focus { outline: none; }
+.steg-hjelp { font-family: var(--font-body); font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 1.25rem; }
+.steg .form-group:first-of-type { margin-top: 1rem; }
+.steg-fremdrift { margin-bottom: 1.75rem; scroll-margin-top: 6rem; }
+#contactForm input, #contactForm textarea { scroll-margin-top: 6rem; }
+#contactForm .form-row { align-items: end; }
+.steg-teller { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 0.5rem; }
+.steg-linje { height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden; }
+.steg-linje span { display: block; height: 100%; width: 20%; background: var(--brand-dark); transition: width 0.25s ease; }
+.valg { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 1.5rem; }
+@media (max-width: 500px) { .valg { grid-template-columns: 1fr; } }
+.valg-kort { display: flex; align-items: center; gap: 0.7rem; min-height: 48px; padding: 0.75rem 1rem; border: 1px solid var(--field-border); border-radius: 8px; background: var(--white); font-family: var(--font-body); font-size: 0.92rem; color: var(--ink); cursor: pointer; transition: border-color 0.15s, background-color 0.15s; }
+.valg-kort:hover { border-color: var(--brand-dark); }
+.valg-kort input { accent-color: var(--brand-dark); width: 1.1rem; height: 1.1rem; margin: 0; flex: none; }
+.valg-kort input:focus-visible { outline: none; }
+.valg-kort:has(input:focus-visible) { outline: 3px solid var(--brand-dark); outline-offset: 3px; }
+.valg-kort:has(input:checked) { border-color: var(--brand-dark); box-shadow: inset 0 0 0 1px var(--brand-dark); background: rgba(201,168,76,0.12); font-weight: 600; }
+.steg-knapper { display: flex; gap: 0.75rem; }
+.steg-knapper .btn-submit { flex: 1; width: auto; }
+.btn-tilbake { background: var(--white); border: 1px solid var(--field-border); border-radius: 4px; padding: 1rem 1.5rem; font-family: var(--font-body); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); cursor: pointer; }
+.btn-tilbake:hover { border-color: var(--brand-dark); }
+.steg-feil { margin: 0 0 1rem; }
+.form-group input[aria-invalid="true"] { border-color: #a12a2a; }

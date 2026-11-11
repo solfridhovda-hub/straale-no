@@ -288,7 +288,7 @@
 
         <div class="form-card">
           <h2 class="form-card-title">Ta kontakt</h2>
-          <p class="form-card-sub">Tar under to minutter å fylle ut.</p>
+          <p class="form-card-sub">Fem korte spørsmål. Tar under to minutter.</p>
 
           <!-- Skjemaet bruker Netlify Forms. Innsendinger vises i Netlify under Forms,
                og Netlify sender e-postvarsel ved hver innsending. Endres oppsettet,
@@ -298,53 +298,113 @@
             <p hidden>
               <label>Ikke fyll ut dette feltet: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
             </p>
+
+            <div class="steg-fremdrift" id="fremdrift" hidden>
+              <p class="steg-teller" id="stegTeller" aria-hidden="true">Steg 1 av 5</p>
+              <div class="steg-linje" aria-hidden="true"><span id="stegLinje"></span></div>
+            </div>
+
             <div id="formArea">
-              <div class="form-row">
+              <fieldset class="steg" aria-describedby="hjelp-1 feil-1">
+                <legend class="steg-sporsmal">Hva vil du ha hjelp med?</legend>
+                <p class="steg-hjelp" id="hjelp-1">Velg det som passer best.</p>
+                <div class="valg">
+                  <label class="valg-kort"><input type="radio" name="behov" value="Nettside" required /> <span>Nettside</span></label>
+                  <label class="valg-kort"><input type="radio" name="behov" value="Sosiale medier" /> <span>Sosiale medier</span></label>
+                  <label class="valg-kort"><input type="radio" name="behov" value="Google-profil" /> <span>Google-profil</span></label>
+                  <label class="valg-kort"><input type="radio" name="behov" value="Alt sammen" /> <span>Alt sammen</span></label>
+                  <label class="valg-kort"><input type="radio" name="behov" value="Vet ikke ennå" /> <span>Vet ikke ennå</span></label>
+                </div>
+                <p class="form-error steg-feil" id="feil-1" role="alert" hidden></p>
+                <div class="steg-knapper">
+                  <button type="button" class="btn-submit" data-neste hidden>Neste</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="steg" aria-describedby="hjelp-2 feil-2">
+                <legend class="steg-sporsmal">Hvilken bransje er du i?</legend>
+                <p class="steg-hjelp" id="hjelp-2">Velg Annet hvis den ikke står her.</p>
+                <div class="valg">
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Rørlegger / VVS" required /> <span>Rørlegger / VVS</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Elektriker" /> <span>Elektriker</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Bilverksted" /> <span>Bilverksted</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Tannlege / Klinikk" /> <span>Tannlege / Klinikk</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Fysioterapeut / Kiropraktor" /> <span>Fysioterapeut / Kiropraktor</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Dyreklinikk" /> <span>Dyreklinikk</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Optiker" /> <span>Optiker</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Regnskapsfører" /> <span>Regnskapsfører</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Frisør / Skjønnhet" /> <span>Frisør / Skjønnhet</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Treningsstudio" /> <span>Treningsstudio</span></label>
+                  <label class="valg-kort"><input type="radio" name="bransje" value="Annet" /> <span>Annet</span></label>
+                </div>
+                <p class="form-error steg-feil" id="feil-2" role="alert" hidden></p>
+                <div class="steg-knapper">
+                  <button type="button" class="btn-tilbake" data-tilbake hidden>Tilbake</button>
+                  <button type="button" class="btn-submit" data-neste hidden>Neste</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="steg" aria-describedby="hjelp-3 feil-3">
+                <legend class="steg-sporsmal">Hvor mange jobber i bedriften?</legend>
+                <p class="steg-hjelp" id="hjelp-3">Deg selv medregnet.</p>
+                <div class="valg">
+                  <label class="valg-kort"><input type="radio" name="ansatte" value="Bare meg" required /> <span>Bare meg</span></label>
+                  <label class="valg-kort"><input type="radio" name="ansatte" value="2 til 4" /> <span>2 til 4</span></label>
+                  <label class="valg-kort"><input type="radio" name="ansatte" value="5 til 15" /> <span>5 til 15</span></label>
+                  <label class="valg-kort"><input type="radio" name="ansatte" value="Flere enn 15" /> <span>Flere enn 15</span></label>
+                </div>
+                <p class="form-error steg-feil" id="feil-3" role="alert" hidden></p>
+                <div class="steg-knapper">
+                  <button type="button" class="btn-tilbake" data-tilbake hidden>Tilbake</button>
+                  <button type="button" class="btn-submit" data-neste hidden>Neste</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="steg">
+                <legend class="steg-sporsmal">Om bedriften</legend>
+                <div class="form-group">
+                  <label for="business">Bedriftsnavn <span class="req">(må fylles ut)</span></label>
+                  <input type="text" id="business" name="bedrift" placeholder="Nordmann Rør AS" autocomplete="organization" required aria-describedby="feil-4" data-feil="Skriv navnet på bedriften." />
+                </div>
+                <div class="form-group">
+                  <label for="web">Nettside (hvis du har en)</label>
+                  <input type="text" id="web" name="nettside" placeholder="www.bedriften.no" autocomplete="url" />
+                </div>
+                <p class="form-error steg-feil" id="feil-4" role="alert" hidden></p>
+                <div class="steg-knapper">
+                  <button type="button" class="btn-tilbake" data-tilbake hidden>Tilbake</button>
+                  <button type="button" class="btn-submit" data-neste hidden>Neste</button>
+                </div>
+              </fieldset>
+
+              <fieldset class="steg">
+                <legend class="steg-sporsmal">Hvor kan jeg nå deg?</legend>
                 <div class="form-group">
                   <label for="name">Navn <span class="req">(må fylles ut)</span></label>
-                  <input type="text" id="name" name="navn" placeholder="Kari Nordmann" autocomplete="name" required />
+                  <input type="text" id="name" name="navn" placeholder="Kari Nordmann" autocomplete="name" required aria-describedby="feil-5" data-feil="Skriv navnet ditt." />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">E-post <span class="req">(må fylles ut)</span></label>
+                    <input type="email" id="email" name="epost" placeholder="kari@bedriften.no" autocomplete="email" required aria-describedby="feil-5" data-feil="Skriv e-postadressen din." />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="telefon" placeholder="900 00 000" autocomplete="tel" />
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="phone">Telefon</label>
-                  <input type="tel" id="phone" name="telefon" placeholder="900 00 000" autocomplete="tel" />
+                  <label for="msg">Noe du vil si på forhånd? <span class="req">(valgfritt)</span></label>
+                  <textarea id="msg" name="melding" placeholder="F.eks. hva som bekymrer deg mest digitalt, eller hva du har prøvd tidligere..."></textarea>
                 </div>
-              </div>
-              <div class="form-group">
-                <label for="email">E-post <span class="req">(må fylles ut)</span></label>
-                <input type="email" id="email" name="epost" placeholder="kari@bedriften.no" autocomplete="email" required />
-              </div>
-              <div class="form-group">
-                <label for="business">Bedriftsnavn <span class="req">(må fylles ut)</span></label>
-                <input type="text" id="business" name="bedrift" placeholder="Nordmann Rør AS" autocomplete="organization" required />
-              </div>
-              <div class="form-group">
-                <label for="industry">Bransje</label>
-                <select id="industry" name="bransje">
-                  <option value="" disabled selected>Velg bransje</option>
-                  <option>Rørlegger / VVS</option>
-                  <option>Elektriker</option>
-                  <option>Bilverksted</option>
-                  <option>Tannlege / Klinikk</option>
-                  <option>Fysioterapeut / Kiropraktor</option>
-                  <option>Dyreklinikk</option>
-                  <option>Optiker</option>
-                  <option>Regnskapsfører</option>
-                  <option>Frisør / Skjønnhet</option>
-                  <option>Treningsstudio</option>
-                  <option>Annet</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="web">Nettside (hvis du har en)</label>
-                <input type="text" id="web" name="nettside" placeholder="www.bedriften.no" autocomplete="url" />
-              </div>
-              <div class="form-group">
-                <label for="msg">Noe du vil si på forhånd? <span class="req">(valgfritt)</span></label>
-                <textarea id="msg" name="melding" placeholder="F.eks. hva som bekymrer deg mest digitalt, eller hva du har prøvd tidligere..."></textarea>
-              </div>
-              <button class="btn-submit" type="submit">Send</button>
-              <p class="form-error" id="formError" role="alert" hidden>Noe gikk galt, og skjemaet ble ikke sendt. Prøv igjen, eller ring meg på <a href="tel:+4799777640">997 77 640</a>.</p>
-              <p class="form-consent">Opplysningene du sender, bruker jeg bare til å svare deg. Les mer i <a href="/personvern">personvernerklæringen</a>.</p>
+                <p class="form-error steg-feil" id="feil-5" role="alert" hidden></p>
+                <div class="steg-knapper">
+                  <button type="button" class="btn-tilbake" data-tilbake hidden>Tilbake</button>
+                  <button class="btn-submit" type="submit">Send</button>
+                </div>
+                <p class="form-error" id="formError" role="alert" hidden>Noe gikk galt, og skjemaet ble ikke sendt. Prøv igjen, eller ring meg på <a href="tel:+4799777640">997 77 640</a>.</p>
+                <p class="form-consent">Opplysningene du sender, bruker jeg bare til å svare deg. Les mer i <a href="/personvern">personvernerklæringen</a>.</p>
+              </fieldset>
             </div>
           </form>
 
@@ -379,41 +439,118 @@
   </footer>
   <script src="js/nav.js"></script>
   <script>
-    const form = document.getElementById('contactForm');
-    function visFeil() {
-      const feil = document.getElementById('formError');
-      feil.hidden = false;
-      sender = false;
-      knapp.disabled = false;
-      knapp.textContent = 'Send';
-    }
-    const knapp = form.querySelector('.btn-submit');
-    let sender = false;
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      if (sender) return;
-      sender = true;
-      knapp.disabled = true;
-      knapp.textContent = 'Sender...';
-      const data = new URLSearchParams(new FormData(form));
-      try {
-        const response = await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: data.toString()
-        });
-        if (response.ok) {
-          form.hidden = true;
-          const ok = document.getElementById('successState');
-          ok.style.display = 'block';
-          ok.focus();
-        } else {
+    (function () {
+      const form = document.getElementById('contactForm');
+      const steg = Array.from(form.querySelectorAll('.steg'));
+      const antall = steg.length;
+      const teller = document.getElementById('stegTeller');
+      const linje = document.getElementById('stegLinje');
+      const knapp = form.querySelector('button[type="submit"]');
+      let aktiv = 0;
+      let sender = false;
+
+      // Uten JavaScript vises hele skjemaet på én side med vanlig nettleservalidering.
+      form.noValidate = true;
+      form.classList.add('flersteg');
+      document.getElementById('fremdrift').hidden = false;
+      form.querySelectorAll('[data-neste], [data-tilbake]').forEach(function (b) { b.hidden = false; });
+      steg.forEach(function (s, i) {
+        const legend = s.querySelector('legend');
+        legend.tabIndex = -1;
+        const sr = document.createElement('span');
+        sr.className = 'sr-only';
+        sr.textContent = 'Steg ' + (i + 1) + ' av ' + antall + ': ';
+        legend.prepend(sr);
+      });
+
+      function vis(i, flyttFokus) {
+        steg.forEach(function (s, n) { s.hidden = n !== i; });
+        aktiv = i;
+        teller.textContent = 'Steg ' + (i + 1) + ' av ' + antall;
+        linje.style.width = ((i + 1) / antall * 100) + '%';
+        if (flyttFokus) {
+          document.getElementById('fremdrift').scrollIntoView({ block: 'start' });
+          steg[i].querySelector('legend').focus({ preventScroll: true });
+        }
+      }
+
+      function sjekk(i) {
+        const s = steg[i];
+        const feil = s.querySelector('.steg-feil');
+        const felt = Array.from(s.querySelectorAll('input, select, textarea'));
+        felt.forEach(function (f) { f.removeAttribute('aria-invalid'); });
+        const ugyldig = felt.find(function (f) { return !f.checkValidity(); });
+        if (!ugyldig) {
+          feil.hidden = true;
+          feil.textContent = '';
+          return true;
+        }
+        let tekst;
+        if (ugyldig.type === 'radio') tekst = 'Velg ett av svarene for å gå videre.';
+        else if (ugyldig.validity.valueMissing) tekst = ugyldig.dataset.feil;
+        else if (ugyldig.type === 'email') tekst = 'E-postadressen ser ikke riktig ut. Den skal ha med @ og domene, for eksempel kari@bedriften.no.';
+        else tekst = 'Sjekk feltet og prøv igjen.';
+        if (ugyldig.type !== 'radio') ugyldig.setAttribute('aria-invalid', 'true');
+        feil.textContent = tekst;
+        feil.hidden = false;
+        ugyldig.focus();
+        return false;
+      }
+
+      form.addEventListener('click', function (e) {
+        if (e.target.closest('[data-neste]')) {
+          if (sjekk(aktiv)) vis(aktiv + 1, true);
+        } else if (e.target.closest('[data-tilbake]')) {
+          vis(aktiv - 1, true);
+        }
+      });
+
+      function visFeil() {
+        document.getElementById('formError').hidden = false;
+        sender = false;
+        knapp.disabled = false;
+        knapp.textContent = 'Send';
+      }
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        // Enter i et tekstfelt før siste steg betyr Neste, ikke Send.
+        if (aktiv < antall - 1) {
+          if (sjekk(aktiv)) vis(aktiv + 1, true);
+          return;
+        }
+        for (let i = 0; i < antall; i++) {
+          if (!steg[i].querySelector(':invalid')) continue;
+          vis(i, false);
+          sjekk(i);
+          return;
+        }
+        if (sender) return;
+        sender = true;
+        knapp.disabled = true;
+        knapp.textContent = 'Sender...';
+        const data = new URLSearchParams(new FormData(form));
+        try {
+          const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: data.toString()
+          });
+          if (response.ok) {
+            form.hidden = true;
+            const ok = document.getElementById('successState');
+            ok.style.display = 'block';
+            ok.focus();
+          } else {
+            visFeil();
+          }
+        } catch (error) {
           visFeil();
         }
-      } catch (error) {
-        visFeil();
-      }
-    });
+      });
+
+      vis(0, false);
+    })();
   </script>
 </body>
 </html>
