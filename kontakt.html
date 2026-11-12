@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ta kontakt | Straale</title>
-  <meta name="description" content="30 minutter der jeg ser på Google-profilen, nettsiden og sosiale medier dine, og sier ærlig hva jeg ser. På video, eller jeg kommer innom." />
+  <meta name="description" content="Det koster ingenting. Vi tar en kaffe, og jeg viser deg hva kundene finner når de søker etter bedriften din på Google og i AI-søk." />
   <link rel="canonical" href="https://straale.no/kontakt" />
   <meta name="theme-color" content="#0D1B2A" />
   <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -15,7 +15,7 @@
   <meta property="og:locale" content="nb_NO" />
   <meta property="og:site_name" content="Straale" />
   <meta property="og:title" content="Ta kontakt | Straale" />
-  <meta property="og:description" content="30 minutter der jeg ser på Google-profilen, nettsiden og sosiale medier dine, og sier ærlig hva jeg ser. På video, eller jeg kommer innom." />
+  <meta property="og:description" content="Det koster ingenting. Vi tar en kaffe, og jeg viser deg hva kundene finner når de søker etter bedriften din på Google og i AI-søk." />
   <meta property="og:url" content="https://straale.no/kontakt" />
   <meta property="og:image" content="https://straale.no/bilder/og-straale.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -196,7 +196,7 @@
         "@id": "https://straale.no/kontakt#side",
         "url": "https://straale.no/kontakt",
         "name": "Ta kontakt | Straale",
-        "description": "30 minutter der jeg ser på Google-profilen, nettsiden og sosiale medier dine, og sier ærlig hva jeg ser. På video, eller jeg kommer innom.",
+        "description": "Det koster ingenting. Vi tar en kaffe, og jeg viser deg hva kundene finner når de søker etter bedriften din på Google og i AI-søk.",
         "inLanguage": "nb",
         "isPartOf": {
           "@id": "https://straale.no/#nettsted"
@@ -248,44 +248,23 @@
 
   <main id="innhold" tabindex="-1">
 
-  <div class="dark-hero" style="padding-bottom: 5rem;">
+  <div class="dark-hero kontakt-hero">
     <div class="hero-inner">
-      <p class="hero-eyebrow">Kom i gang</p>
-      <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Ta<br><em>kontakt</em></h1>
-      <p class="hero-sub">30 minutter. Jeg ser på hvordan bedriften din ser ut på nett, og sier ærlig hva jeg ser.</p>
+      <div class="kontakt-hero-tekst">
+        <p class="hero-eyebrow hero-eyebrow-setning">Hvis du er usikker, så er du sikker.</p>
+        <h1 class="hero-title kontakt-tittel">Ta <em>kontakt</em></h1>
+        <p class="hero-sub">Det koster ingenting. Vi tar en kaffe mens jeg viser deg hvordan du kan bli mer <a href="/#synlig">synlig</a>, <a href="/#tydelig">tydelig</a> eller til og med <a href="/#stralende">strålende</a> på internett.</p>
+      </div>
+      <figure class="kontakt-foto">
+        <img src="/bilder/solfrid-anbefalt-400.webp" srcset="/bilder/solfrid-anbefalt-400.webp 400w, /bilder/solfrid-anbefalt-800.webp 800w" sizes="(max-width: 760px) 88px, 300px" width="1080" height="1350" alt="Solfrid Straale Fjalestad smiler til kamera" decoding="async" />
+        <figcaption>Det er meg du snakker med.<br>Solfrid, Moss</figcaption>
+      </figure>
     </div>
   </div>
 
-  <section class="light-section">
+  <section class="light-section kontakt-seksjon">
     <div class="light-section-inner">
       <div class="contact-layout">
-        <div class="contact-left">
-          <p>Jeg går gjennom Google-profilen din, hva nettsiden forteller nye kunder, og hvordan du står deg mot to eller tre lokale konkurrenter. Vi tar det på video, eller jeg kommer innom hvis du holder til i nærheten.</p>
-          <p>Du går fra møtet med noe du kan bruke, uansett om du blir kunde eller ikke.</p>
-
-          <div class="contact-direct">
-            <h2 class="wh-title">Heller ringe eller sende e-post?</h2>
-            <p><a href="tel:+4799777640">Telefon 997 77 640</a></p>
-            <p><a href="mailto:post@straale.no">post@straale.no</a></p>
-          </div>
-
-          <div class="what-happens">
-            <h2 class="wh-title">Hva skjer etter at du sender skjemaet</h2>
-            <div class="wh-step">
-              <span class="wh-step-num" aria-hidden="true">1</span>
-              <p class="wh-step-text"><strong>Du hører fra meg innen én virkedag,</strong> og vi finner et tidspunkt som passer.</p>
-            </div>
-            <div class="wh-step">
-              <span class="wh-step-num" aria-hidden="true">2</span>
-              <p class="wh-step-text"><strong>Vi tar gjennomgangen.</strong> Jeg viser deg hva som fungerer, hva som ikke gjør det, og hva konkurrentene gjør bedre.</p>
-            </div>
-            <div class="wh-step">
-              <span class="wh-step-num" aria-hidden="true">3</span>
-              <p class="wh-step-text"><strong>Du bestemmer selv.</strong> Jeg ringer ikke etter med mindre du vil. Vil du gå videre, setter vi i gang oppstarten.</p>
-            </div>
-          </div>
-        </div>
-
         <div class="form-card">
           <h2 class="form-card-title">Ta kontakt</h2>
           <p class="form-card-sub">Fem korte spørsmål. Tar under to minutter.</p>
@@ -411,7 +390,37 @@
           <div class="success-state" id="successState" tabindex="-1">
             <div class="success-icon" aria-hidden="true">✓</div>
             <h2 class="success-title">Takk, jeg tar kontakt!</h2>
-            <p class="success-body">Du hører fra meg innen én virkedag, så finner vi et tidspunkt for gjennomgangen.</p>
+            <p class="success-body">Så finner vi en tid som passer.</p>
+          </div>
+        </div>
+
+        <div class="contact-left">
+          <h2 class="kontakt-h2">Hva vi ser på</h2>
+          <p>Jeg søker etter bedriften din slik en kunde gjør, på Google og i AI-søk som ChatGPT. Så viser jeg deg hva folk finner, hva som mangler og hva som er lurt å ta tak i først.</p>
+          <p>Det koster ingenting, og du trenger ikke forberede noe.</p>
+
+          <div class="what-happens">
+            <h2 class="wh-title">Slik går det for seg</h2>
+            <ol class="wh-liste">
+              <li class="wh-step">
+                <span class="wh-step-num" aria-hidden="true">1</span>
+                <p class="wh-step-text">Jeg tar kontakt, og vi finner en tid som passer.</p>
+              </li>
+              <li class="wh-step">
+                <span class="wh-step-num" aria-hidden="true">2</span>
+                <p class="wh-step-text">Vi møtes slik det passer deg. Jeg kommer gjerne innom, eller vi tar det på nett.</p>
+              </li>
+              <li class="wh-step">
+                <span class="wh-step-num" aria-hidden="true">3</span>
+                <p class="wh-step-text">Du bestemmer selv om du vil gå videre. Jeg ringer ikke etter med mindre du vil.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="contact-direct">
+            <h2 class="wh-title">Heller ringe eller sende e-post?</h2>
+            <p><a href="tel:+4799777640">Telefon 997 77 640</a></p>
+            <p><a href="mailto:post@straale.no">post@straale.no</a></p>
           </div>
         </div>
       </div>

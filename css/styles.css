@@ -912,3 +912,32 @@ h2.wh-title, h3.rc-title, h3.value-title, h2.success-title { margin-top: 0; }
 .btn-tilbake:hover { border-color: var(--brand-dark); }
 .steg-feil { margin: 0 0 1rem; }
 .form-group input[aria-invalid="true"] { border-color: #a12a2a; }
+
+/* ─── KONTAKTSIDEN ─── */
+.kontakt-hero { padding-top: clamp(3.5rem, 8vw, 6rem); padding-bottom: clamp(3rem, 6vw, 5rem); }
+.kontakt-hero .hero-inner { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center; }
+.kontakt-tittel { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+.kontakt-foto { margin: 0; justify-self: end; width: 100%; max-width: 300px; }
+.kontakt-foto img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.kontakt-foto figcaption { margin-top: 0.75rem; font-family: var(--font-body); font-size: 0.85rem; line-height: 1.5; color: rgba(255,255,255,0.75); }
+@media (max-width: 760px) {
+  .kontakt-hero .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .kontakt-foto { justify-self: start; max-width: none; display: flex; align-items: center; gap: 1rem; }
+  .kontakt-foto img { width: 88px; height: 88px; object-fit: cover; object-position: 50% 25%; border-radius: 50%; }
+  .kontakt-foto figcaption { margin-top: 0; }
+}
+.kontakt-seksjon { padding-top: clamp(3rem, 6vw, 4.5rem); }
+.kontakt-seksjon .contact-layout { margin-top: 0; gap: clamp(3rem, 6vw, 5rem); }
+.kontakt-h2 { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 340; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 0.75rem; }
+.kontakt-seksjon .what-happens { margin-top: 2rem; }
+@media (min-width: 761px) {
+  .kontakt-seksjon .form-card { grid-column: 2; grid-row: 1; }
+  .kontakt-seksjon .contact-left { grid-column: 1; grid-row: 1; }
+}
+.wh-liste { list-style: none; margin: 0; padding: 0; }
+.kontakt-seksjon .wh-step-num { color: var(--ink-muted); }
+.hero-eyebrow-setning { font-size: clamp(0.95rem, 1.4vw, 1.05rem); font-weight: 500; letter-spacing: 0; text-transform: none; }
+.hero-sub a { color: var(--brand-accent-light); text-decoration: underline; text-underline-offset: 0.2em; }
+.hero-sub a:hover { color: var(--white); }
+.package-card[id] { scroll-margin-top: 6rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
